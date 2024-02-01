@@ -1,8 +1,7 @@
 function Hello(props) {
-    return (<div>
-           <h1> Hello World!</h1>
-           <p>Lets do some react</p>
-    </div>)
-      }
-  
+  let items = ['Ada','Chioma', 'Ruth']
+  return(
+    <p> {items} Lets do some react</p>)
+ } 
+
   export default Hello;

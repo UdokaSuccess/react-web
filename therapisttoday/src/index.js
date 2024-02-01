@@ -7,4 +7,10 @@ import Hello from './App.js'
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
-root.render(<Hello/>)
+root.render(
+   <div>
+         <Hello/>
+         <Hello/>
+         <Hello/>
+   </div> 
+)
