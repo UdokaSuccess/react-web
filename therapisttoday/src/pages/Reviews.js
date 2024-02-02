@@ -35,7 +35,7 @@ const booking = persons.map(function(item) {
         <div>
          <img src={item.image} width={200} className="review"/>
          <p className='name'>Name: {item.name}</p>
-         <p className='heading'>{item.experience}</p>
+         <p className='heading'> {item.experience}</p>
         </div>
     </div>
     )}
