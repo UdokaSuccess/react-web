@@ -1,7 +1,11 @@
-import Imgb from "./pic1.jpg"
-import Imga from "./pic2.jpg"
-import Imgc from "./pic3.jpg"
-import Imgd from "./pic4.jpg"
+import Imgb from "./pic4.jpg"
+import Imga from "./pic1.jpg"
+// import Imgc from "./pic8.jpg"
+// import Imgd from "./pic9.jpg"
+import Imge from "./pic3.jpg"
+// import Imgf from "./pic7.jpg"
+
+
 
 
 const persons = [
@@ -13,41 +17,34 @@ const persons = [
 },
 {
     name: "Kathryn",
-    image: Imgc,
+    image: Imgb,
     experience: "Enthusaistic about Helping people with mental disorders",
     rate: "$35/hr" 
 },
 {
     name: "Joel",
-    image: Imgb,
+    image: Imge,
     experience: "3 years of experience in pediatrics, and psychology",
     rate: "$45/hr" 
 },
 {
     name: "Mabel",
-    image: Imgd,
+    image: Imga,
     experience: "Doctor in psychology, MBA PHD",
     rate: "$35/hr" 
 },
 {
     name: "Kathryn",
-    image: Imgc,
+    image: Imgb,
     experience: "Enthusaistic about Helping people with mental disorders",
     rate: "$35/hr" 
 },
 {
     name: "Joel",
-    image: Imgb,
+    image: Imge,
     experience: "3 years of experience in pediatrics, and psychology",
     rate: "$45/hr" 
-},
-{
-    name: "Mabel",
-    image: Imgd,
-    experience: "Doctor in psychology, MBA PHD",
-    rate: "$35/hr" 
-},
-{
+},    {
     name: "John",
     image: Imga,
     experience: "5 years of experience in health and psychology",
@@ -55,7 +52,7 @@ const persons = [
 },
 {
     name: "Kathryn",
-    image: Imgc,
+    image: Imgb,
     experience: "Enthusaistic about Helping people with mental disorders",
     rate: "$35/hr" 
 },
@@ -66,11 +63,9 @@ const persons = [
     return(
         <div className= "card">
         <div>
-         <img src={item.image} width={200} className="img"/>
-         <p className='name'>Name: {item.name}</p>
-         <p className='heading'>Headline: {item.experience}</p>
-         <p className='rate'>Rate: {item.rate}</p>
-         <button>Contact</button>
+         <img src={item.image} width={60} className="img"/>
+         <h3 className='name'>{item.name}</h3>
+         <p>{item.experience}</p>
         </div>
     </div>
     )}
@@ -79,10 +74,11 @@ const persons = [
 
 function Booking (arg) {
   return (
-    <section>
-  <h1>Top Professionals</h1>
+    <section className="heading">
+        <small>Qualified,  Accredited,  Clinical Psychologists </small>
+  <h1>TOP PROFESSIONALS</h1>
   <div className="card-row">{booking}</div>
-    </section>
+  </section>
   )
   }
   

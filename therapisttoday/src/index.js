@@ -4,9 +4,6 @@ import './index.css'
 import App from './App.js'
 
 
-
-
-
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
