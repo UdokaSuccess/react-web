@@ -2,26 +2,26 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <footer className='footer'>
+      <h4 className='show'>Book us for your therapy sessions <a href='#'>here</a></h4>
       <div className='footer-text'>
-      <h4>Book us for your therapy sessions <a href='#'>here</a></h4>
-      
+      <h4 className='hide'>Book us for your therapy sessions <a href='#'>here</a></h4>
            <ul>
             <li>Contact</li>
             <li>Social</li> 
             <li>About</li> 
-            <li>Careers</li>
-             <li>Connect</li>
+            <li>Support</li>
+             <li>Reviews</li>
            </ul>
            <ul>
             <li>Contact</li>
-            <li>Social</li> 
+            <li>Blog</li> 
             <li>About</li> 
             <li>Careers</li>
              <li>Connect</li>
            </ul> 
            <ul>
-            <li>Contact</li>
+            <li>Support</li>
             <li>Social</li> 
             <li>About</li> 
             <li>Careers</li>
@@ -29,7 +29,7 @@ function Footer() {
            </ul>
 </div>
           <p>Copywright &copy;  Udoka Kasie</p>
-    </div>
+    </footer>
   )
 }
 

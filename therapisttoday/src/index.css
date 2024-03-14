@@ -6,13 +6,15 @@
     --white: #FEFEFE;
 }
 
-#root{
+body{
  box-sizing: border-box;  
  margin: 0px; 
  padding: 0px;
  font-family: Georgia, 'Times New Roman', Times, serif;
  scroll-behavior: smooth;
+ overflow-x: hidden;
 }
+
 
 /* --------------------------------Landing Page Section--------------------------- */
 
@@ -25,6 +27,8 @@
     top: 0px;
     z-index: 2;
     background-color: var(--dark-sec-color);
+    align-items: center;
+    justify-content: space-between;
    }
 
 .navbar ul{
@@ -41,14 +45,6 @@
    text-decoration: none;
    color: var(--white);
    text-transform: uppercase;
-
-}
-.buttonNav{
-   padding: 0.4rem;
-   background-color: Blue ;
-   border-radius: 50px;
-   margin: 10px;
-   font-size: 10px;
 
 }
 
@@ -73,10 +69,13 @@
 }
 
 .hero-section{
-    margin: 12px;
+    margin: 8px;
 }
 small{
     text-transform: uppercase;
+}
+.hero-section img{
+    width: 560px;
 }
 .cta-btn{
     padding: 1.2rem 2.4rem;
@@ -142,7 +141,12 @@ hr{
 .coaching{
     margin: 6rem;
 }
-
+.coaching-section{
+    margin: 3rem;
+}
+.sub{
+    font-size: 16px;
+}
 .subs{
     margin-top: 3rem;
     display: flex;
@@ -150,17 +154,19 @@ hr{
     justify-content: center;
     background-color: var(--light-sec-color);
     padding-bottom: 8px;
-    font-size: 16px;
-    line-height: 3px;
 }
 
 .subs input{
     width: 50%;
-    padding: 10px 24px;
+    padding: 12px 24px;}
+
+.subs input[placeholder]{
+    font-size: 14px;
+    line-height: 3px;
 }
 
 .subs button{
-    padding: 10px 24px;
+    padding: 12px 24px;
     background-color: var(--primary-color);
     border: none;
 }
@@ -170,7 +176,6 @@ hr{
 
 .about{
     font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     word-spacing: 1.6px;
     max-width: 480px
     }
@@ -191,26 +196,26 @@ hr{
     }
     .about2::before{
         content: '';
-        padding: 1.4rem;
-        height: 90%;
-        width: 72%;
-        right: 24%;
+        padding: 0;
+        height: 54%;
+        width: 24%;
+        left: 46%;
         position: absolute;
         background-color: var(--primary-color);
         z-index: -1;
-        margin-bottom: 3.2rem;
+        margin-top: 2rem;
     }
 
     .about2::after{
         content: '';
-        padding: 1rem;
-        height: 84%;
-        width: 62%;
-        left: 24%;
+        padding: 8px;
+        right: 12%;
+        height: 56%;
+        width: 24%;
         position: absolute;
         background-color: var(--light-sec-color);
         z-index: -1;
-        margin-top: 2.4rem;
+        margin-top: 1.6rem;
     }
 
     .col{
@@ -230,57 +235,74 @@ hr{
     
 }
     .card{
-        flex-basis: 18%;
+        flex-basis: 20%;
         border: 16px solid var(--white);
-        margin: 12px;
+        margin: 8px;
     }
+
     .card .img{
         width: 100%;
         overflow: hidden;
     }
+    .title{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     .heading{
     background-image: linear-gradient( #abcbe7  0 30%,  #FEFEFE 30% 100%);
-    text-align: center; 
-    padding-top: 4rem;      
+    padding-top: 4rem;  
+    text-align: center;  
      margin: 2rem 0;
     }
 
     /* -------------------------------------blog--------------------------------------------- */
+    .connect{
+        text-align: center;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+   .post{
+        flex-basis: 23%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray-white);
+     }
+     .blog-row{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;    
+     }
 
     .blog-card{
-        padding: 2rem;
-        margin: 3rem;
+        flex-basis: 30%;
+        padding: 1rem;
+        margin: 24px;
         z-index: 1;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
         background-color: #fff;
     }
-    /* -------------------reviews------------------------------------- */
-    .card-r{   
-        flex-basis: 23%;     
-        min-width: 160px;   
-        z-index: 1;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        margin: 1rem;
-        padding: 1rem;;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    .blog-card img{
+        width: 100%;
     }
-    .card-r img{
-        border-radius: 50%;
-        width: 140px;
+    .blog-link{
+        text-decoration: none;
+        color: #000;
     }
+    
 
-    .workWithUs{
-        margin: 2.4rem;
-        width: 70%;
-        border : 2px black;
-        background-color: blanchedalmond;
-
-    }
-         /*=-------------------------Footer section ---------------------------------*/
+     /*=-------------------------Footer section ---------------------------------*/
         .footer{
             background-color: #000;    
             color: #fff;
             text-align: center;
+            margin: 0;
+        }
+        .show{
+            display: none;
         }
          .footer-text{
             display: flex;
@@ -292,3 +314,479 @@ hr{
             list-style: none;
             margin: 16px
          }
+
+
+         /* ------------------------------Media queries------------------------------------------------- */
+         @media screen and (max-width: 320px) {
+            .navbar{
+                display: flex;
+                align-items: center;
+               }
+
+               .navbar img {
+                width: 94px;
+               }
+            
+             .navbar ul{
+                display: none;
+               text-align: center; 
+               flex-wrap: wrap;   
+            }
+            .navbar ul li{
+               list-style-type: none;
+               margin: 0 16px;
+            }
+            .icon{
+                font-size: 32px;
+            }
+
+            /* -----------------hero sec-------- */
+            .row{
+                padding: 0;
+                margin: 3.2rem auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;                
+                text-align: center;
+            }
+            section{
+                margin: 0;
+                padding: 0;
+            }
+            
+            .row-1::after{
+              content: '';
+              padding: 2px;
+            }
+            
+            .hero-section{
+                margin: 8px;
+                text-align: center;
+            }
+            small{
+                text-transform: uppercase;
+            }
+            .hero-section img{
+                width: 300px;
+            }
+            h1{
+                font-size: 24px;
+            }
+            .cta-btn{
+                padding: 1rem 1.6rem;
+                margin: 0 auto;
+            }
+
+            /* -----------info ----------------- */            
+            .info-section{
+                margin: 16px;
+                max-width: 280px;
+            }
+            p{
+                letter-spacing: 1px;
+                line-height: 1.2rem;
+            }
+            
+            hr{
+                width: 70%;
+                margin: 1.8rem;
+                border: 5px solid;
+            }
+            /* ------------------comm-------------- */
+
+            .comm-section{
+                background-color: var(--light-sec-color);
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .comm-section::before{
+                display: none;
+                content: '';
+                padding: 2.4rem;
+                height: 90%;
+                width: 100%;
+                left: 0;
+                position: absolute;
+                background-color: var(--light-sec-color);
+                z-index: -2;
+            }
+            
+            .community{
+                padding: 8px;
+            }
+            .comm{
+                margin:4px;
+            }
+
+            .comm img{
+                width: 280px;
+            }
+
+            .community::before{
+                display: none;
+                content: '';
+                padding:  1rem;
+                height: 24%;
+                width: 48%;
+                position: absolute;
+                left: 0;
+                background-color: var(--primary-color);
+                z-index: -1;
+                margin-top: 8rem;
+                }
+            /* ----------------------coaching------------------------ */
+                .coaching{
+                    margin: 1rem;
+                }
+                .coaching-section{
+                    margin: 0;
+                    padding: 16px;
+                }
+                .coaching img{
+                    width: 300px;
+                }   
+
+                .connect{
+                    text-align: center;
+                    margin: 0;
+                }
+            /*-------------subscribe sec-----------------------*/
+               .subs {   
+                    margin: 16px 4px 0 4px;
+                    text-align: center;
+                }
+                .sub{
+                    display: block;
+                }
+                .subs input{
+                    width: 64%;
+                    padding: 16px 32px;}
+                
+                .subs input[placeholder]{
+                    font-size: 14px;
+                    line-height: 3px;
+                }
+
+                .subs button{
+                    margin-top: 4px;
+                    padding: 16px 32px;
+                    background-color: var(--primary-color);
+                    border: none;
+                }
+
+                /* ----------------------------booking----------------- */
+                .card-row{
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: center
+                    
+                }
+                    .card{
+                        flex-basis: 100%;
+                        border: 16px solid var(--white);
+                        margin: 8px;
+                        text-align: center;
+                    }
+                    .heading{
+                    background-image: linear-gradient( #abcbe7  0 20%,  #FEFEFE 20% 100%);
+                    padding-top: 2rem;  
+                     margin: 2rem 0;
+                    }
+
+                    /* ------------------blog------------------------------------ */
+                     .blog-row{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+                        flex-direction: column;
+                     }
+                     .blog-sec{
+                        text-align: center;
+                        padding-top: 1.6rem;
+                     }
+                    .blog-card{
+                        flex-basis: 30%;
+                        padding: 1rem;
+                        margin: 24px;
+                        z-index: 1;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+                        background-color: #fff;
+                    }
+                    .blog-card img{
+                        width: 100%;
+                    }
+                    .blog-link{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                    
+                    
+                    
+                /* --------------footer-section------------------------------ */
+                
+                .footer{
+                    padding: 4px;
+                }
+                .show{
+                    display: block;
+                }
+                .hide{
+                    display: none;
+                }
+                 .footer-text{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                 }
+                 .footer ul{
+                    padding: 16px;
+                 }
+        
+                 .footer ul li{
+                    margin: 8px
+                 }
+        
+                
+         }
+                 /* ------------------------------Media queries------------------------------------------------- */
+                 @media screen and (max-width: 678px) {
+                    .navbar{
+                        display: flex;
+                        align-items: center;
+                       }
+        
+                       .navbar img {
+                        width: 94px;
+                       }
+                    
+                     .navbar ul{
+                        display: none;
+                       text-align: center; 
+                       flex-wrap: wrap;   
+                    }
+                    .navbar ul li{
+                       list-style-type: none;
+                       margin: 0 16px;
+                    }
+                    .icon{
+                        font-size: 32px;
+                    }
+        
+                    /* -----------------hero sec-------- */
+                    .row{
+                        padding: 0;
+                        margin: 3.2rem auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;                
+                        text-align: center;
+                    }
+                    section{
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .row-1::after{
+                      content: '';
+                      padding: 2px;
+                    }
+                    
+                    .hero-section{
+                        margin: 8px;
+                        text-align: center;
+                    }
+                    small{
+                        text-transform: uppercase;
+                    }
+                    .hero-section img{
+                        width: 300px;
+                    }
+                    h1{
+                        font-size: 24px;
+                    }
+                    .cta-btn{
+                        padding: 1rem 1.6rem;
+                        margin: 0 auto;
+                    }
+        
+                    /* -----------info ----------------- */            
+                    .info-section{
+                        margin: 16px;
+                        max-width: 280px;
+                    }
+                    p{
+                        letter-spacing: 1px;
+                        line-height: 1.2rem;
+                    }
+                    
+                    hr{
+                        width: 70%;
+                        margin: 1.8rem;
+                        border: 5px solid;
+                    }
+                    /* ------------------comm-------------- */
+        
+                    .comm-section{
+                        background-color: var(--light-sec-color);
+                        padding: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+        
+                    .comm-section::before{
+                        display: none;
+                        content: '';
+                        padding: 2.4rem;
+                        height: 90%;
+                        width: 100%;
+                        left: 0;
+                        position: absolute;
+                        background-color: var(--light-sec-color);
+                        z-index: -2;
+                    }
+                    
+                    .community{
+                        padding: 8px;
+                    }
+                    .comm{
+                        margin:4px;
+                    }
+        
+                    .comm img{
+                        width: 280px;
+                    }
+        
+                    .community::before{
+                        display: none;
+                        content: '';
+                        padding:  1rem;
+                        height: 24%;
+                        width: 48%;
+                        position: absolute;
+                        left: 0;
+                        background-color: var(--primary-color);
+                        z-index: -1;
+                        margin-top: 8rem;
+                        }
+                    /* ----------------------coaching------------------------ */
+                        .coaching{
+                            margin: 1rem;
+                        }
+                        .coaching-section{
+                            margin: 0;
+                            padding: 16px;
+                        }
+                        .coaching img{
+                            width: 300px;
+                        }   
+        
+                        .connect{
+                            text-align: center;
+                            margin: 0;
+                        }
+                    /*-------------subscribe sec-----------------------*/
+                       .subs {   
+                            margin: 16px 4px 0 4px;
+                            text-align: center;
+                        }
+                        .sub{
+                            display: block;
+                        }
+                        .subs input{
+                            width: 64%;
+                            padding: 16px 32px;}
+                        
+                        .subs input[placeholder]{
+                            font-size: 14px;
+                            line-height: 3px;
+                        }
+        
+                        .subs button{
+                            margin-top: 4px;
+                            padding: 16px 32px;
+                            background-color: var(--primary-color);
+                            border: none;
+                        }
+        
+                        /* ----------------------------booking----------------- */
+                        .card-row{
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-items: center;
+                            justify-content: center
+                            
+                        }
+                            .card{
+                                flex-basis: 100%;
+                                border: 16px solid var(--white);
+                                margin: 8px;
+                                text-align: center;
+                            }
+                            .heading{
+                            background-image: linear-gradient( #abcbe7  0 20%,  #FEFEFE 20% 100%);
+                            padding-top: 2rem;  
+                             margin: 2rem 0;
+                            }
+        
+                            /* ------------------blog------------------------------------ */
+                             .blog-row{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center; 
+                                flex-direction: column;
+                             }
+                             .blog-sec{
+                                text-align: center;
+                                padding-top: 1.6rem;
+                             }
+                            .blog-card{
+                                flex-basis: 30%;
+                                padding: 1rem;
+                                margin: 24px;
+                                z-index: 1;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+                                background-color: #fff;
+                            }
+                            .blog-card img{
+                                width: 100%;
+                            }
+                            .blog-link{
+                                text-decoration: none;
+                                color: #000;
+                            }
+                            
+                            
+                            
+                        /* --------------footer-section------------------------------ */
+                        
+                        .footer{
+                            padding: 4px;
+                        }
+                        .show{
+                            display: block;
+                        }
+                        .hide{
+                            display: none;
+                        }
+                         .footer-text{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                         }
+                         .footer ul{
+                            padding: 16px;
+                         }
+                
+                         .footer ul li{
+                            margin: 8px
+                         }
+                
+                        
+                 }
