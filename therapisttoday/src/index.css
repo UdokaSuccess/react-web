@@ -47,6 +47,9 @@ body{
    text-transform: uppercase;
 
 }
+.icon{
+    display: none;
+}
 
 /* ---------------------------hero section-------------------------------------------------------- */
 .landing{
@@ -337,7 +340,7 @@ hr{
                margin: 0 16px;
             }
             .icon{
-                font-size: 32px;
+                display: block;
             }
 
             /* -----------------hero sec-------- */
@@ -454,6 +457,7 @@ hr{
                     text-align: center;
                     margin: 0;
                 }
+
             /*-------------subscribe sec-----------------------*/
                .subs {   
                     margin: 16px 4px 0 4px;
@@ -554,14 +558,14 @@ hr{
                 
          }
                  /* ------------------------------Media queries------------------------------------------------- */
-                 @media screen and (max-width: 678px) {
+                @media screen and (min-width: 321px) and (max-width: 400px){
                     .navbar{
                         display: flex;
                         align-items: center;
                        }
         
                        .navbar img {
-                        width: 94px;
+                        width: 106px;
                        }
                     
                      .navbar ul{
@@ -574,7 +578,7 @@ hr{
                        margin: 0 16px;
                     }
                     .icon{
-                        font-size: 32px;
+                        display: block;
                     }
         
                     /* -----------------hero sec-------- */
@@ -605,7 +609,7 @@ hr{
                         text-transform: uppercase;
                     }
                     .hero-section img{
-                        width: 300px;
+                        width: 320px;
                     }
                     h1{
                         font-size: 24px;
@@ -684,12 +688,255 @@ hr{
                             padding: 16px;
                         }
                         .coaching img{
-                            width: 300px;
+                            width: 340px;
                         }   
         
                         .connect{
                             text-align: center;
                             margin: 0;
+                        }
+                        .connect img{
+                            width: 340px;
+                        }
+                    /*-------------subscribe sec-----------------------*/
+                       .subs {   
+                            margin: 16px 4px 0 4px;
+                            text-align: center;
+                        }
+                        .sub{
+                            display: block;
+                        }
+                        .subs input{
+                            width: 64%;
+                            padding: 16px 32px;}
+                        
+                        .subs input[placeholder]{
+                            font-size: 14px;
+                            line-height: 3px;
+                        }
+        
+                        .subs button{
+                            margin-top: 4px;
+                            padding: 16px 32px;
+                            background-color: var(--primary-color);
+                            border: none;
+                        }
+        
+                        /* ----------------------------booking----------------- */
+                        .card-row{
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-items: center;
+                            justify-content: center
+                            
+                        }
+                            .card{
+                                flex-basis: 100%;
+                                border: 16px solid var(--white);
+                                margin: 8px;
+                                text-align: center;
+                            }
+                            .heading{
+                            background-image: linear-gradient( #abcbe7  0 20%,  #FEFEFE 20% 100%);
+                            padding-top: 2rem;  
+                             margin: 2rem 0;
+                            }
+        
+                            /* ------------------blog------------------------------------ */
+                             .blog-row{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center; 
+                                flex-direction: column;
+                             }
+                             .blog-sec{
+                                text-align: center;
+                                padding-top: 1.6rem;
+                             }
+                            .blog-card{
+                                flex-basis: 30%;
+                                padding: 1rem;
+                                margin: 24px;
+                                z-index: 1;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+                                background-color: #fff;
+                            }
+                            .blog-card img{
+                                width: 100%;
+                            }
+                            .blog-link{
+                                text-decoration: none;
+                                color: #000;
+                            }
+                            
+                            
+                            
+                        /* --------------footer-section------------------------------ */
+                        
+                        .footer{
+                            padding: 4px;
+                        }
+                        .show{
+                            display: block;
+                        }
+                        .hide{
+                            display: none;
+                        }
+                         .footer-text{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                         }
+                         .footer ul{
+                            padding: 16px;
+                         }
+                
+                         .footer ul li{
+                            margin: 8px
+                         }
+                
+                        
+                 }
+                 /* -------------------------------------- */
+                 @media screen and (min-width: 401px) and (max-width: 768px){
+                    .navbar{
+                        display: flex;
+                        align-items: center;
+                       }
+        
+                       .navbar img {
+                        width: 114px;
+                       }
+                    
+                     .navbar ul{
+                        display: none;
+                       text-align: center; 
+                       flex-wrap: wrap;   
+                    }
+                    .navbar ul li{
+                       list-style-type: none;
+                       margin: 0 16px;
+                    }
+                    .icon{
+                        display: block;
+                    }
+        
+                    /* -----------------hero sec-------- */
+                    .row{
+                        padding: 0;
+                        margin: 3.2rem auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;                
+                        text-align: center;
+                    }
+                    section{
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .row-1::after{
+                      content: '';
+                      padding: 2px;
+                    }
+                    
+                    .hero-section{
+                        margin: 8px;
+                        text-align: center;
+                    }
+                    small{
+                        text-transform: uppercase;
+                    }
+                    .hero-section img{
+                        width: 400px;
+                    }
+                    h1{
+                        font-size: 24px;
+                    }
+                    .cta-btn{
+                        padding: 1rem 1.6rem;
+                        margin: 0 auto;
+                    }
+        
+                    /* -----------info ----------------- */            
+                    .info-section{
+                        margin: 16px;
+                        max-width: 280px;
+                    }
+                    p{
+                        letter-spacing: 1px;
+                        line-height: 1.2rem;
+                    }
+                    
+                    hr{
+                        width: 70%;
+                        margin: 1.8rem;
+                        border: 5px solid;
+                    }
+                    /* ------------------comm-------------- */
+        
+                    .comm-section{
+                        background-color: var(--light-sec-color);
+                        padding: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+        
+                    .comm-section::before{
+                        display: none;
+                        content: '';
+                        padding: 2.4rem;
+                        height: 90%;
+                        width: 100%;
+                        left: 0;
+                        position: absolute;
+                        background-color: var(--light-sec-color);
+                        z-index: -2;
+                    }
+                    
+                    .community{
+                        padding: 8px;
+                    }
+                    .comm{
+                        margin:4px;
+                    }
+        
+                    .comm img{
+                        width: 280px;
+                    }
+        
+                    .community::before{
+                        display: none;
+                        content: '';
+                        padding:  1rem;
+                        height: 24%;
+                        width: 48%;
+                        position: absolute;
+                        left: 0;
+                        background-color: var(--primary-color);
+                        z-index: -1;
+                        margin-top: 8rem;
+                        }
+                    /* ----------------------coaching------------------------ */
+                        .coaching{
+                            margin: 1rem;
+                        }
+                        .coaching-section{
+                            margin: 0;
+                            padding: 16px;
+                        }
+                        .coaching img{
+                            width: 390px;
+                        }   
+        
+                        .connect{
+                            text-align: center;
+                            margin: 0;
+                        }
+                        .connect img{
+                            width: 390px;
                         }
                     /*-------------subscribe sec-----------------------*/
                        .subs {   

@@ -7,9 +7,7 @@ import { useState } from 'react';
 
 
 
-function Navbar(props) {
-   const[menuOpen, SetMenuOpen] = useState(false)
-    
+function Navbar(props) { 
     return(
       <div className="navbar">
         <Link to='/'><img src={Logo} width={116}/></Link>
@@ -19,7 +17,7 @@ function Navbar(props) {
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blog'>Blog</Link></li> 
          </ul>
-         <IoMenuSharp onClick={() => SetMenuOpen(!menuOpen)} className='icon'/>
+         <IoMenuSharp className='icon' size={32}/>
          </div>
       )
    } 
