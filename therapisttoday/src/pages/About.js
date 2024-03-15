@@ -3,7 +3,7 @@ import img from './images/pic3.jpg'
 
 function About(props){
     return(
-        <section>
+        <section className='about-sec'>
     <div className='row'>
        <div className="about">
        <h1>About Us</h1> 

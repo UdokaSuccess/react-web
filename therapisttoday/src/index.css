@@ -31,15 +31,10 @@ body{
     justify-content: space-between;
    }
 
-.navbar ul{
-   display: flex;
-   flex: 1;
-   justify-content: space-evenly;
-}
 .navbar ul li{
    list-style-type: none;
    display: inline-block;
-   margin: 0 24px;
+   margin: 0 32px;
 }
 .navbar ul li a{
    text-decoration: none;
@@ -47,6 +42,10 @@ body{
    text-transform: uppercase;
 
 }
+.navbar ul li a:hover{
+   text-decoration:underline
+}
+
 .icon{
     display: none;
 }
@@ -228,7 +227,7 @@ hr{
         padding: 2rem;
 
     }
-    /* /* --------------------------Booking Section-------------------------------------- */
+    /*--------------------------Booking Section-------------------------------------- */
 
 .card-row{
     display: flex;
@@ -321,23 +320,27 @@ hr{
 
          /* ------------------------------Media queries------------------------------------------------- */
          @media screen and (max-width: 320px) {
-            .navbar{
-                display: flex;
-                align-items: center;
-               }
-
-               .navbar img {
-                width: 94px;
+            .navbar img {
+                width: 116px;
                }
             
-             .navbar ul{
+             .nav-list{
                 display: none;
-               text-align: center; 
-               flex-wrap: wrap;   
-            }
+                position: absolute;           
+                top: 50%;   
+                width: 100%;
+                background-color: var(--dark-sec-color);
+                overflow: hidden;
+                transition: all 0.2s ease-in
+             }  
+
+             .nav-list.active{
+                display: block;
+             }
+  
             .navbar ul li{
-               list-style-type: none;
-               margin: 0 16px;
+               display: block;
+               margin: 16px 8px;
             }
             .icon{
                 display: block;
@@ -419,14 +422,14 @@ hr{
             }
             
             .community{
-                padding: 8px;
+                padding: 0px;
             }
             .comm{
-                margin:4px;
+                margin: 0px;
             }
 
             .comm img{
-                width: 280px;
+                width: 260px;
             }
 
             .community::before{
@@ -481,6 +484,18 @@ hr{
                     background-color: var(--primary-color);
                     border: none;
                 }
+                /* -------------------------------------- */
+                
+              .about2::before{
+                 display: none;
+                       }
+
+              .about2::after{
+                    display: none;
+                      }
+                .about2 img{
+                        width: 300px;
+                      }
 
                 /* ----------------------------booking----------------- */
                 .card-row{
@@ -559,23 +574,28 @@ hr{
          }
                  /* ------------------------------Media queries------------------------------------------------- */
                 @media screen and (min-width: 321px) and (max-width: 400px){
-                    .navbar{
-                        display: flex;
-                        align-items: center;
-                       }
-        
+      
                        .navbar img {
-                        width: 106px;
+                        width: 116px;
                        }
                     
-                     .navbar ul{
+                     .nav-list{
                         display: none;
-                       text-align: center; 
-                       flex-wrap: wrap;   
-                    }
+                        position: absolute;           
+                        top: 50%;   
+                        width: 100%;
+                        background-color: var(--dark-sec-color);
+                        overflow: hidden;
+                        transition: all 0.2s ease-in
+                     }  
+
+                     .nav-list.active{
+                        display: block;
+                     }
+          
                     .navbar ul li{
-                       list-style-type: none;
-                       margin: 0 16px;
+                       display: block;
+                       margin: 16px 8px;
                     }
                     .icon{
                         display: block;
@@ -602,7 +622,6 @@ hr{
                     }
                     
                     .hero-section{
-                        margin: 8px;
                         text-align: center;
                     }
                     small{
@@ -622,7 +641,7 @@ hr{
                     /* -----------info ----------------- */            
                     .info-section{
                         margin: 16px;
-                        max-width: 280px;
+                        max-width: 320px;
                     }
                     p{
                         letter-spacing: 1px;
@@ -638,7 +657,7 @@ hr{
         
                     .comm-section{
                         background-color: var(--light-sec-color);
-                        padding: 2rem;
+                        padding: 1rem;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -657,14 +676,14 @@ hr{
                     }
                     
                     .community{
-                        padding: 8px;
+                        padding: 0px;
                     }
                     .comm{
-                        margin:4px;
+                        margin:0;
                     }
         
                     .comm img{
-                        width: 280px;
+                        width: 320px;
                     }
         
                     .community::before{
@@ -720,9 +739,20 @@ hr{
                             padding: 16px 32px;
                             background-color: var(--primary-color);
                             border: none;
-                        }
+                        }          
+                      /*--------------------------------------------  */
+                         .about2::before{
+                            display: none;
+                      }
+
+                          .about2::after{
+                            display: none;
+                     }
+                         .about2 img{
+                            width: 340px;
+                     }
         
-                        /* ----------------------------booking----------------- */
+                    /* ----------------------------booking----------------- */
                         .card-row{
                             display: flex;
                             flex-flow: row wrap;
@@ -751,7 +781,7 @@ hr{
                              }
                              .blog-sec{
                                 text-align: center;
-                                padding-top: 1.6rem;
+                                padding-top: 3rem;
                              }
                             .blog-card{
                                 flex-basis: 30%;
@@ -797,25 +827,29 @@ hr{
                 
                         
                  }
-                 /* -------------------------------------- */
+                 /* --------------------------------------------------------------- */
                  @media screen and (min-width: 401px) and (max-width: 768px){
-                    .navbar{
-                        display: flex;
-                        align-items: center;
-                       }
-        
-                       .navbar img {
-                        width: 114px;
+                    .navbar img {
+                        width: 116px;
                        }
                     
-                     .navbar ul{
+                     .nav-list{
                         display: none;
-                       text-align: center; 
-                       flex-wrap: wrap;   
-                    }
+                        position: absolute;           
+                        top: 50%;   
+                        width: 100%;
+                        background-color: var(--dark-sec-color);
+                        overflow: hidden;
+                        transition: all 0.2s ease-in
+                     }  
+
+                     .nav-list.active{
+                        display: block;
+                     }
+          
                     .navbar ul li{
-                       list-style-type: none;
-                       margin: 0 16px;
+                       display: block;
+                       margin: 16px;
                     }
                     .icon{
                         display: block;
@@ -851,7 +885,7 @@ hr{
                     .hero-section img{
                         width: 400px;
                     }
-                    h1{
+                    h1{  
                         font-size: 24px;
                     }
                     .cta-btn{
@@ -862,7 +896,7 @@ hr{
                     /* -----------info ----------------- */            
                     .info-section{
                         margin: 16px;
-                        max-width: 280px;
+                        max-width: 400px;
                     }
                     p{
                         letter-spacing: 1px;
@@ -961,7 +995,22 @@ hr{
                             background-color: var(--primary-color);
                             border: none;
                         }
-        
+
+                        /* ---------------------------------------about------- */
+                        .about2::before{
+                            display: none;
+                      }
+                      .about-sec{
+                        padding: 1rem;
+                      }
+
+                        .about2::after{
+                            display: none;
+                     }
+                         .about2 img{
+                            width: 400px;
+                     }
+
                         /* ----------------------------booking----------------- */
                         .card-row{
                             display: flex;
@@ -991,7 +1040,7 @@ hr{
                              }
                              .blog-sec{
                                 text-align: center;
-                                padding-top: 1.6rem;
+                                padding-top: 4rem;
                              }
                             .blog-card{
                                 flex-basis: 30%;
@@ -1037,3 +1086,248 @@ hr{
                 
                         
                  }
+
+            /* ------------------------------------------------------------------ */
+                                  @media screen and (min-width: 768px) and (max-width: 1024px){
+                                    .navbar img {
+                                        width: 116px;
+                                       }
+                                    
+                                     .nav-list{
+                                        display: none;
+                                        position: absolute;           
+                                        top: 50%;   
+                                        width: 100%;
+                                        background-color: var(--dark-sec-color);
+                                        overflow: hidden;
+                                        transition: all 0.2s ease-in
+                                     }  
+                
+                                     .nav-list.active{
+                                        display: block;
+                                     }
+                          
+                                    .navbar ul li{
+                                       display: block;
+                                       margin: 16px;
+                                    }
+                                    .icon{
+                                        display: block;
+                                    }
+                        
+                                    /* -----------------hero sec-------- */
+                                    .row{
+                                        padding: 0;
+                                        margin: 3.2rem auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;                
+                                        text-align: center;
+                                    }
+                                    section{
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    
+                                    .row-1::after{
+                                      content: '';
+                                      padding: 4px;
+                                    }
+                                    
+                                    .hero-section{
+                                        margin: 8px;
+                                        text-align: center;
+                                    }
+                                    small{
+                                        text-transform: uppercase;
+                                    }
+                                    .hero-section img{
+                                        width: 640px;
+                                    }
+                                    h1{
+                                        font-size: 24px;
+                                    }
+                                    .cta-btn{
+                                        padding: 1rem 1.6rem;
+                                        margin: 0 auto;
+                                    }
+                        
+                                    /* -----------info ----------------- */            
+                                    .info-section{
+                                        margin: 16px;
+                                        max-width: 640px;
+                                    }
+                                    p{
+                                        letter-spacing: 1px;
+                                        line-height: 1.2rem;
+                                    }
+                                    
+                                    hr{
+                                        width: 90%;
+                                        margin: 2rem;
+                                        border: 5px solid;
+                                    }
+                                    /* ------------------comm-------------- */
+                        
+                                    .comm-section{
+                                        background-color: var(--light-sec-color);
+                                        padding: 2rem;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                        
+                                    .comm-section::before{
+                                        display: none;
+                                        content: '';
+                                        padding: 2.4rem;
+                                        height: 90%;
+                                        width: 100%;
+                                        left: 0;
+                                        position: absolute;
+                                        background-color: var(--light-sec-color);
+                                        z-index: -2;
+                                    }
+                                    
+                                    .community{
+                                        padding: 0px;
+                                    }
+                                    .comm{
+                                        margin:4px;
+                                    }
+                        
+                                    .comm img{
+                                        width: 640px;
+                                    }
+                        
+                                    .community::before{
+                                        display: none;
+                                        content: '';
+                                        padding:  1rem;
+                                        height: 24%;
+                                        width: 48%;
+                                        position: absolute;
+                                        left: 0;
+                                        background-color: var(--primary-color);
+                                        z-index: -1;
+                                        margin-top: 8rem;
+                                        }
+                                    /* ----------------------coaching------------------------ */
+                                        .coaching{
+                                            margin: 1rem;
+                                        }
+                                        .coaching-section{
+                                            margin: 0;
+                                            padding: 16px;
+                                        }
+                                        .coaching img{
+                                            width: 640px;
+                                        }   
+                        
+                                        .connect{
+                                            text-align: center;
+                                            margin: 0;
+                                        }
+                                        .connect img{
+                                            width: 640px;
+                                        }
+                                    /*-------------subscribe sec-----------------------*/
+                                       .subs {   
+                                            margin: 16px 4px 0 4px;
+                                            text-align: center;
+                                        }
+                                        .sub{
+                                            display: block;
+                                        }
+                                        .subs input{
+                                            width: 64%;
+                                            padding: 16px 32px;}
+                                        
+                                        .subs input[placeholder]{
+                                            font-size: 14px;
+                                            line-height: 3px;
+                                        }
+                        
+                                        .subs button{
+                                            margin-top: 4px;
+                                            padding: 16px 32px;
+                                            background-color: var(--primary-color);
+                                            border: none;
+                                        }
+                        
+                                        /* ----------------------------booking----------------- */
+                                        .card-row{
+                                            display: flex;
+                                            flex-flow: row wrap;
+                                            align-items: center;
+                                            justify-content: center
+                                            
+                                        }
+                                            .card{
+                                                flex-basis: 100%;
+                                                border: 16px solid var(--white);
+                                                margin: 8px;
+                                                text-align: center;
+                                            }
+                                            .heading{
+                                            background-image: linear-gradient( #abcbe7  0 20%,  #FEFEFE 20% 100%);
+                                            padding-top: 2rem;  
+                                             margin: 2rem 0;
+                                            }
+                        
+                                            /* ------------------blog------------------------------------ */
+                                             .blog-row{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center; 
+                                                flex-direction: column;
+                                             }
+                                             .blog-sec{
+                                                text-align: center;
+                                                padding-top: 1.6rem;
+                                             }
+                                            .blog-card{
+                                                flex-basis: 30%;
+                                                padding: 1rem;
+                                                margin: 24px;
+                                                z-index: 1;
+                                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+                                                background-color: #fff;
+                                            }
+                                            .blog-card img{
+                                                width: 100%;
+                                            }
+                                            .blog-link{
+                                                text-decoration: none;
+                                                color: #000;
+                                            }
+                                            
+                                            
+                                            
+                                        /* --------------footer-section------------------------------ */
+                                        
+                                        .footer{
+                                            padding: 4px;
+                                        }
+                                        .show{
+                                            display: block;
+                                        }
+                                        .hide{
+                                            display: none;
+                                        }
+                                         .footer-text{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                         }
+                                         .footer ul{
+                                            padding: 16px;
+                                         }
+                                
+                                         .footer ul li{
+                                            margin: 8px
+                                         }
+                                
+                                        
+                                 }
