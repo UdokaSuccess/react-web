@@ -149,13 +149,13 @@ hr{
 .sub{
     font-size: 16px;
 }
-.subs{
+.subs{    
+    background-color: var(--light-sec-color);
+    padding-bottom: 8px;    
     margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light-sec-color);
-    padding-bottom: 8px;
 }
 
 .subs input{
