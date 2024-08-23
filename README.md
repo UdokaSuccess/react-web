@@ -1,6 +1,7 @@
 This Project was built with:
 * React.JS
 * Vanilla CSS
+* Framer.js for animations
 
 To view on your local machine
 * Clone this repository
